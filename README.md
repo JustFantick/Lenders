@@ -1,12 +1,12 @@
 Структура файлов
 
-Offer Name/->
+            Offer Name/->
 
-            Language/->
+                        Language/->
             
-                      index.html
-                      assets/->
+                                  index.html
+                                  assets/->
                       
-                              style.css
-                              image.png
-                              script.js
+                                          style.css
+                                          image.png
+                                          script.js

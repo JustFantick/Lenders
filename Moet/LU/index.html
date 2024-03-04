@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./assets/general.css">
+	<link rel="stylesheet" href="./assets/home.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="./assets/loading.css">
+	<link rel="stylesheet" href="./assets/prizes.css">
+	<link rel="stylesheet" href="./assets/popup.css">
+	<link rel="stylesheet" href="./assets/anim.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+	<script src="./assets/script.js" defer></script>
+	<title>Moet</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="wrapper__content">
+			<header class="header">
+				<div class="header__body __container">
+					<div class="header__left">
+						<div class="logo">
+							<picture>
+								<source srcset="assets/logo.png" type="image/webp">
+								<img src="assets/logo.png" alt="logo">
+							</picture>
+						</div>
+
+						<div class="categories">
+							<picture>
+								<source srcset="assets/menu-burger-icon.png" type="image/webp">
+								<img src="assets/menu-burger-icon.png" alt="menu-burger">
+							</picture>
+							<strong>Étagères</strong>
+						</div>
+
+						<div class="promotion">
+							<img src="assets/promotion.svg" alt="promotion-img">
+							<strong>Programme de fidélité</strong>
+						</div>
+					</div>
+
+					<label class="searchbar">
+						<input type="text" name="search">
+						<img src="assets/search.svg" alt="search">
+					</label>
+
+					<div class="header_right">
+						<div class="favorites">
+							<picture>
+								<source srcset="assets/favorite.svg" type="image/webp">
+								<img src="assets/favorite.svg" alt="cart">
+							</picture>
+							<strong>Mes produits</strong>
+						</div>
+
+						<div class="cart">
+							<picture>
+								<source srcset="assets/cart.svg" type="image/webp">
+								<img src="assets/cart.svg" alt="cart">
+							</picture>
+							<strong>1.95€</strong>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="main">
+				<div class="home __container">
+					<div class="home__description delay-container">
+						<div class="description-text">
+							<h1 class="slide-left-anim once" style="--anim-order: 1;">Félicitations !</h1>
+							<h2 class="description-text__subtitle slide-left-anim once" style="--anim-order: 2;">
+								Le aujourd'hui - 10 jours
+							</h2>
+							<div class="description-text__paragraphs slide-left-anim once" style="--anim-order: 3;">
+								<p>Le CREUSET lance une promotion sans précédent en France.</p>
+								<p>Pour célébrer son 280e anniversaire, la grande marque de champagne Moët & Chandon s'est
+									associée à la chaîne de
+									supermarchés Auchan pour lancer une vente de 1 000 bouteilles de champagne Coffret Brut
+									Impérial à seulement 1.95€.
+								</p>
+							</div>
+
+						</div>
+						<div class="description-slider fade-out-anim once" style="--anim-order: 4;">
+							<div class="swiper slider">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<picture>
+											<source srcset="assets/slider-img-1.png" type="image/webp">
+											<img src="assets/slider-img-1.png" alt="slider-img-1">
+										</picture>
+									</div>
+									<div class="swiper-slide">
+										<picture>
+											<source srcset="assets/slider-img-2.png" type="image/webp">
+											<img src="assets/slider-img-2.png" alt="slider-img-2">
+										</picture>
+									</div>
+								</div>
+
+								<div class="swiper-button-prev"></div>
+								<div class="swiper-button-next"></div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="home__question question-section">
+						<div class="question-section__text">
+							<p class="slide-left-anim once" style="--anim-order: 5;">
+								L'événement se déroulera jusqu'au 31 mars inclus.
+							</p>
+							<p class="slide-left-anim once" style="--anim-order: 6;">
+								Le délai de livraison est de 4 à 7 jours selon l'adresse. Ne tardez pas !
+							</p>
+							<p class="slide-left-anim once" style="--anim-order: 7;">
+								L'offre est limitée !
+							</p>
+						</div>
+
+						<div class="question-section__question slide-left-anim once" style="--anim-order: 8;">
+							<p id="quiz-counter">Questions 1 sur 3</p>
+							<p id="quiz-question" class="highlighted">
+								Quel type d'alcool préférez-vous ?
+							</p>
+						</div>
+
+						<div class="question-section__buttons swiper quiz-slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-slideindex="1">
+									<button class="button scale-anim once" type="button" style="--anim-order: 9;">
+										Le vin
+									</button>
+									<button class="button scale-anim once" type="button" style="--anim-order: 10;">
+										Champagne
+									</button>
+									<button class="button scale-anim once" type="button" style="--anim-order: 11;">
+										Autre
+									</button>
+
+								</div>
+								<div class="swiper-slide" data-slideindex="2">
+									<button class="button" type="button">
+										Oui
+									</button>
+									<button class="button" type="button">
+										Non
+									</button>
+								</div>
+								<div class="swiper-slide" data-slideindex="3">
+									<button class="button" type="button">
+										La force
+									</button>
+									<button class="button" type="button">
+										L'arôme distinctif
+									</button>
+									<button class="button" type="button">
+										la marque
+									</button>
+
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="__container">
+					<button type="button" class="faq-icon">
+						<img src="assets/message.png" alt="faq-icon">
+					</button>
+				</div>
+
+			</main>
+
+		</div>
+
+	</div>
+
+	<template id="loader">
+		<div class="loading __container fade-out-anim" style="--anim-order: 1;">
+			<h2 class="loading__title slide-left-anim" style="--anim-order: 3;">
+				Vos réponses sont en cours de vérification
+			</h2>
+
+			<div class="loading__paragraphs slide-left-anim" style="--anim-order: 4;">
+				<p>Vous avez répondu à 3/3 questions !</p>
+				<p>Il n'y a pas d'enquêtes antérieures de votre PI</p>
+				<p>Il y a encore des cadeaux disponibles !</p>
+			</div>
+
+			<img class="loading__loader-img" src="assets/loader.png" alt="loader-img">
+
+			<p class="highlighted slide-left-anim" style="--anim-order: 4;">Chargement...</p>
+		</div>
+	</template>
+
+	<template id="choise-popup">
+		<div class="popup fade-out-anim" style="--anim-order: 1;">
+			<div class="popup__body choise-popup">
+				<picture>
+					<source srcset="assets/box.png" type="image/webp">
+					<img class="choise-popup__gift-box fade-out-anim" style="--anim-order: 1;" src="assets/box.png"
+						alt="box-img">
+				</picture>
+
+				<div class="choise-popup__title slide-left-anim" style="--anim-order: 2;">
+					<p class="highlighted">
+						Félicitations, vos réponses ont été correctement validées !
+					</p>
+				</div>
+
+				<p class="slide-left-anim" style="--anim-order: 3;">
+					Aujourd'hui, <time></time> <br>
+					vous avez une chance de gagner Moët & Chandon - Coffret 6 Brut Impérial ! Il ne vous reste plus qu'à
+					choisir le bon
+					coffret cadeau. Vous avez trois essais, bonne chance !
+				</p>
+				<p class="slide-left-anim" style="--anim-order: 4;">
+					Il ne vous reste plus qu'à choisir le bon coffret cadeau.
+				</p>
+				<p class="slide-left-anim" style="--anim-order: 5;">
+					Vous avez 3 essais, bonne chance !
+				</p>
+
+				<button style="--anim-order: 6;" type="button" class="button scale-anim">ok</button>
+			</div>
+
+		</div>
+	</template>
+
+	<template id="prizes-grid">
+		<div class="prizes-grid __container"></div>
+	</template>
+
+	<template id="prize-item">
+		<div class="prize-item">
+			<img class="prize-item__head" src="assets/box-head.png" alt="box-head">
+			<img class="prize-item__bottom" src="assets/box-bottom.png" alt="box-bottom">
+		</div>
+	</template>
+
+	<template id="error-popup">
+		<div class="popup fade-out-anim" style="--anim-order: 1;">
+			<div class="popup__body error-popup">
+				<h1 class="slide-left-anim" style="--anim-order: 2;">OHHH...</h1>
+				<p class="slide-left-anim" style="--anim-order: 3;">
+					Nous sommes désolés, ce cadeau est vide ! Il vous reste essais. Bonne chance !
+				</p>
+				<button type="button" class="button scale-anim" style="--anim-order: 4;">ok</button>
+
+			</div>
+
+		</div>
+	</template>
+
+	<template id="congrats-popup">
+		<div class="popup fade-out-anim" style="--anim-order: 1;">
+			<div class="popup__body congrats-popup">
+				<img src="assets/box-congrats-ver.png" alt="box-congrats-ver" class="fade-out-anim"
+					style="--anim-order: 2;">
+				<h3 class="slide-left-anim" style="--anim-order: 2;">
+					Félicitations, vous êtes l'heureux gagnant !
+				</h3>
+				<h4 class="slide-left-anim" style="--anim-order: 3;">
+					Vous avez gagné la Mystery Box de Le CREUSET
+				</h4>
+				<ol>
+					<li class="slide-left-anim" style="--anim-order: 4;">
+						1. Vous devez remplir le formulaire et confirmer votre participation.
+					</li>
+					<li class="slide-left-anim" style="--anim-order: 5;">
+						2. Votre prix spécial de 1.95€ sera disponible pendant les prochaines 2 minutes 00 secondes.</li>
+					<li class="slide-left-anim" style="--anim-order: 6;">
+						3. Le Coffret 6 Brut Impérial sera envoyé au gagnant dans un délai de 4 à 7 jours directement à
+						l'adresse indiquée.
+					</li>
+				</ol>
+				<a href="#" class="button scale-anim" style="--anim-order: 7;">ok</a>
+			</div>
+		</div>
+	</template>
+
+	<template id="faq-popup">
+		<div class="popup fade-out-anim" style="--anim-order: 1;">
+			<div class="popup__body faq-popup">
+				<div class="faq-popup__section">
+					<p class="highlighted slide-left-anim" style="--anim-order: 2;">
+						Combien de temps dois-je attendre pour recevoir mon prix ? ￼
+					</p>
+					<p class="slide-left-anim" style="--anim-order: 2.5;">
+						Le délai est généralement de 3 à 5 jours ouvrables.
+					</p>
+				</div>
+				<div class="faq-popup__section">
+					<p class="highlighted slide-left-anim" style="--anim-order: 3;">
+						Y a-t-il des frais cachés ?
+					</p>
+					<p class="slide-left-anim" style="--anim-order: 3.5;">
+						Absolument pas. Une fois que vous avez gagné le prix et saisi vos coordonnées, nous nous occupons du
+						reste. Les frais
+						d'expédition sont à notre charge !
+					</p>
+				</div>
+				<div class="faq-popup__section">
+					<p class="highlighted slide-left-anim" style="--anim-order: 4;">
+						Je suis le gagnant, pourquoi dois-je répondre aux questions ? ￼
+					</p>
+					<p class="slide-left-anim" style="--anim-order: 4.5;">
+						Tu n'es toujours pas le gagnant, mais tu as été l'une des 100 personnes choisies pour tenter de gagner
+						notre prix.
+					</p>
+				</div>
+				<div class="faq-popup__section">
+					<p class="highlighted slide-left-anim" style="--anim-order: 5;">
+						Comment puis-je obtenir mon prix si je gagne ?
+					</p>
+					<p class="slide-left-anim" style="--anim-order: 5.5;">
+						Tout d'abord, vous devez indiquer votre adresse de livraison et vos coordonnées, puis notre système
+						vous dirigera.
+						Deuxièmement, vous devez prouver que vous êtes un véritable être humain, car le prix est destiné à un
+						être humain.
+					</p>
+				</div>
+				<div class="faq-popup__section">
+					<p class="highlighted slide-left-anim" style="--anim-order: 6;">
+						Pourquoi dois-je payer 1.95€ pour le prix ?
+					</p>
+					<p class="slide-left-anim" style="--anim-order: 6.5;">
+						1.95€ n'est pas un droit - il s'agit d'une retenue de paiement pour prouver que vous êtes vraiment un
+						être humain. TOUS
+						les paiements seront remboursés après approbation.
+					</p>
+				</div>
+				<div class="faq-popup__section">
+					<p class="highlighted slide-left-anim" style="--anim-order: 7;">
+						Je ne peux pas utiliser ma carte de crédit, la transaction a échoué ?
+					</p>
+					<p class="slide-left-anim" style="--anim-order: 7.5;">
+						Si vous ne pouvez pas utiliser votre carte de crédit, cela signifie que votre banque bloque le compte
+						: vous devez
+						l'approuver sur votre compte bancaire.
+					</p>
+				</div>
+			</div>
+		</div>
+	</template>
+
+</body>
+
+</html>

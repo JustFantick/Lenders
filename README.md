@@ -1,9 +1,9 @@
 Структура файлов
 
 Offer Name|--
-            Geo|--
-                  index.html
-                  assets|--
-                          style.css
-                          image.png
-                          script.js
+            Language|--
+                      index.html
+                      assets|--
+                              style.css
+                              image.png
+                              script.js

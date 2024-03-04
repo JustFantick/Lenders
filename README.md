@@ -1,2 +1,9 @@
-# test
-# test 2
+Структура файлов
+
+Offer Name|--
+            Geo|--
+                  index.html
+                  assets|--
+                          style.css
+                          image.png
+                          script.js

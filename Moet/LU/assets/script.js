@@ -116,9 +116,9 @@ function initPrizes() {
 
 	for (let i = 0; i < 12; i++) {
 		let temp = PrizesItem.querySelector('.prize-item').cloneNode(true);
-		temp.classList.add('slide-left-anim');
+		temp.classList.add('fade-out-anim');
 		temp.classList.add('once');
-		temp.style = `--anim-order: ${i * 0.5};`;
+		temp.style = `--anim-order: ${1};`;
 		prizesContainer.appendChild(temp);
 	}
 

@@ -34,6 +34,5 @@
 
 .loading__loader-img {
 	margin: clamp(35px, calc(8.4px + 1.28vw), 55px) 0;
-
-	animation: loading 7s linear infinite;
+	animation: loading 0.75s linear infinite;
 }

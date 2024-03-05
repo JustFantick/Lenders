@@ -36,9 +36,9 @@ function initHomeLayout() {
 	});
 
 	const quizSlider = new Swiper('.quiz-slider', {
-		//Bug issue: sometimes height set's wrong, so slider doesn't work
-		//autoHeight: true,
+		autoHeight: true,
 		spaceBetween: 30,
+		allowTouchMove: false,
 	});
 
 	const quizSlidesArr = document.querySelectorAll('.quiz-slider .swiper-slide');

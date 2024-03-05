@@ -36,9 +36,9 @@ function initHomeLayout() {
 	});
 
 	const quizSlider = new Swiper('.quiz-slider', {
-		//Bug issue: sometimes height set's wrong, so slider doesn't work
-		//autoHeight: true,
+		autoHeight: true,
 		spaceBetween: 30,
+		allowTouchMove: false,
 	});
 
 	const quizSlidesArr = document.querySelectorAll('.quiz-slider .swiper-slide');
@@ -53,7 +53,7 @@ function initHomeLayout() {
 
 			if (i !== quizLength - 1) {
 				quizSlider.slideNext();
-				editQuestionInfo(i + 2);
+				editQuestionInfo(i + 1);
 			} else {
 				removeHomeLayout();
 			}
@@ -77,7 +77,7 @@ function initHomeLayout() {
 	});
 
 	function editQuestionInfo(questionIndex) {
-		document.getElementById('quiz-counter').textContent = `Questions ${questionIndex} sur 3`;
+		document.getElementById('quiz-counter').textContent = `Questions ${questionIndex + 1} sur 3`;
 		document.getElementById('quiz-question').textContent = questionsList[questionIndex];
 	}
 
@@ -118,7 +118,7 @@ function initPrizes() {
 		let temp = PrizesItem.querySelector('.prize-item').cloneNode(true);
 		temp.classList.add('slide-left-anim');
 		temp.classList.add('once');
-		temp.style = `--anim-order: ${i};`;
+		temp.style = `--anim-order: ${i * 0.5};`;
 		prizesContainer.appendChild(temp);
 	}
 

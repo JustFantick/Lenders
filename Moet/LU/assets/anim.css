@@ -1,7 +1,7 @@
 :root {
 	--anim-delay-time: 150ms;
-	--anim-duration-short: 0.3s;
-	--anim-duration-long: 1s;
+	--anim-duration-short: 0.25s;
+	--anim-duration-long: 0.6s;
 }
 
 @keyframes slide-left-anim {

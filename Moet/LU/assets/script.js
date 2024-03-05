@@ -53,7 +53,7 @@ function initHomeLayout() {
 
 			if (i !== quizLength - 1) {
 				quizSlider.slideNext();
-				editQuestionInfo(i + 2);
+				editQuestionInfo(i + 1);
 			} else {
 				removeHomeLayout();
 			}
@@ -77,7 +77,7 @@ function initHomeLayout() {
 	});
 
 	function editQuestionInfo(questionIndex) {
-		document.getElementById('quiz-counter').textContent = `Questions ${questionIndex} sur 3`;
+		document.getElementById('quiz-counter').textContent = `Questions ${questionIndex + 1} sur 3`;
 		document.getElementById('quiz-question').textContent = questionsList[questionIndex];
 	}
 

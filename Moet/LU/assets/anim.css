@@ -1,0 +1,99 @@
+:root {
+	--anim-delay-time: 150ms;
+	--anim-duration-short: 0.3s;
+	--anim-duration-long: 1s;
+}
+
+@keyframes slide-left-anim {
+	from {
+		transform: translateX(-50%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+.slide-left-anim {
+	transform: translateX(-50%);
+	opacity: 0;
+
+	animation-name: slide-left-anim;
+	animation-duration: var(--anim-duration-short);
+	animation-delay: calc(var(--anim-order) * var(--anim-delay-time));
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes fade-out-anim {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.fade-out-anim {
+	opacity: 0;
+
+	animation-name: fade-out-anim;
+	animation-duration: var(--anim-duration-long);
+	animation-delay: calc(var(--anim-order) * var(--anim-delay-time));
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes scale-anim {
+	0% {
+		opacity: 0;
+		transform: scale(0);
+	}
+
+	60% {
+		transform: scale(1.05);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.scale-anim {
+	opacity: 0;
+	transform: scale(0);
+
+	animation-name: scale-anim;
+	animation-duration: var(--anim-duration-short);
+	animation-delay: calc(var(--anim-order) * var(--anim-delay-time));
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+
+@keyframes fade-in-anim {
+	from {
+		opacity: 1;
+		transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+}
+
+/* Aditional class "once" disable block's repeat animation
+ when .wrapper gots .close-anim */
+.wrapper.close-anim .scale-anim:not(.once),
+.wrapper.close-anim .fade-out-anim:not(.once),
+.wrapper.close-anim .slide-left-anim:not(.once) {
+	animation-name: fade-in-anim;
+	animation-duration: 0.1s;
+	animation-delay: 0s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+}

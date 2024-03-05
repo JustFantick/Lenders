@@ -1,0 +1,122 @@
+@import url(reset.css);
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:regular,600,700);
+@import url(header.css);
+
+:root {
+	--text-color-primary: #080808;
+	--text-color-secondary: #f4f4f4;
+	--accent-color-primary: #fa0001;
+	--accent-color-secondary: #a25c5c;
+	--popup-background-color: rgba(0, 0, 0, 0.6);
+	--btn-border-radius: 5px;
+	--blur: 50px;
+}
+
+body,
+html {
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 16px;
+	color: var(--text-color-primary);
+}
+
+.wrapper {
+	min-height: 100vh;
+	min-height: 100dvh;
+	max-width: 100%;
+	overflow: clip;
+
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+
+	background: url('.assets/bg-full.png') repeat;
+}
+
+.wrapper__content {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+
+	padding-bottom: 71px;
+}
+
+.wrapper__content .main {
+	flex: 1 1 auto;
+}
+
+.wrapper>picture img {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: 1;
+}
+
+[class*="__container"] {
+	max-width: 1750px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+h1 {
+	/* diapason: 48-96px */
+	font-size: clamp(3rem, calc(2.24rem + 3.14vw), 6rem);
+	font-weight: bold;
+	line-height: 136.458333%;
+}
+
+h2 {
+	/* diapason: 24-64px */
+	font-size: clamp(1.5rem, calc(0.86rem + 2.61vw), 4rem);
+	line-height: 136%;
+	font-weight: bold;
+}
+
+h3 {
+	/* diapason: 34-36px */
+	font-size: clamp(2.13rem, calc(2.09rem + 0.13vw), 2.25rem);
+	line-height: 136%;
+	font-weight: bold;
+}
+
+h4 {
+	/* diapason: 20-32px */
+	font-size: clamp(1.25rem, calc(1.06rem + 0.78vw), 2rem);
+	line-height: 136%;
+	font-weight: bold;
+}
+
+p,
+ul li,
+ol li {
+	/* diapason: 12-16px */
+	font-size: clamp(0.75rem, calc(0.69rem + 0.26vw), 1rem);
+	line-height: 1.5;
+}
+
+p.highlighted {
+	/* diapason: 12-20px */
+	font-size: clamp(0.75rem, calc(0.62rem + 0.52vw), 1.25rem);
+	font-weight: 700;
+	line-height: 133%;
+}
+
+.button {
+	background-color: var(--accent-color-primary);
+	color: var(--text-color-secondary);
+	font-weight: 700;
+	border-radius: var(--btn-border-radius);
+	text-transform: uppercase;
+	padding: 15px 35px;
+	border: 1px solid var(--accent-color-primary);
+	transition: all 0.25s linear;
+}
+
+@media (hover: hover) {
+	.button:hover {
+		background-color: var(--accent-color-secondary);
+	}
+}

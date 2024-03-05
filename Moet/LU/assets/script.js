@@ -33,6 +33,9 @@ function initHomeLayout() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		autoplay: {
+			delay: 15000,
+		}
 	});
 
 	const quizSlider = new Swiper('.quiz-slider', {

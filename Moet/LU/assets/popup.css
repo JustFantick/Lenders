@@ -69,6 +69,10 @@
 	margin-top: clamp(5px, calc(1.6px + 0.96vw), 20px);
 }
 
+.congrats-popup li #timer {
+	color: var(--accent-color-primary);
+}
+
 /* FAQ popup */
 .faq-popup {
 	margin: 0 20px;

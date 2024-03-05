@@ -23,6 +23,8 @@
 	width: clamp(98px, calc(59.2px + 9.93vw), 250px);
 	aspect-ratio: 250 / 267;
 	position: relative;
+
+	--box-anim-duration: 3s;
 }
 
 @keyframes temblor {
@@ -75,7 +77,7 @@
 .prize-item__head {
 	top: -11%;
 	z-index: 15;
-	transition: all var(--anim-duration-long) ease;
+	transition: all var(--box-anim-duration) ease-in-out;
 }
 
 .prize-item__bottom img,
@@ -98,18 +100,16 @@
 .prize-item__prize {
 	bottom: 0%;
 	z-index: 11;
-	transform: rotate(30deg) scale(0.5);
-	opacity: 0;
-	transition: all var(--anim-duration-long) ease 100ms;
+	transform: rotate(30deg) scale(0.5) translateY(20%);
+	transition: all var(--box-anim-duration) ease calc(var(--box-anim-duration) * 0.6);
 }
 
 /* Box opened styles */
 .prize-item.open .prize-item__head {
-	transform: translateY(-40%);
+	transform: translateY(-45%);
 }
 
 /* Box win styles */
 .prize-item.win.open .prize-item__prize {
 	transform: translateY(-30%) rotate(30deg) scale(0.55);
-	opacity: 1;
 }

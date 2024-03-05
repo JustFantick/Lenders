@@ -1,4 +1,5 @@
 .prizes-grid {
+	margin-top: clamp(30px, calc(20px + 2.61vw), 70px);
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	justify-items: center;

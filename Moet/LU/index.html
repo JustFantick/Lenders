@@ -176,13 +176,11 @@
 					</div>
 				</div>
 
-				<div class="__container">
-					<button type="button" class="faq-icon">
-						<img src="assets/message.png" alt="faq-icon">
-					</button>
-				</div>
-
 			</main>
+
+			<button type="button" class="faq-icon">
+				<img src="assets/message.png" alt="faq-icon">
+			</button>
 
 		</div>
 
@@ -262,7 +260,8 @@
 			<div class="popup__body error-popup">
 				<h1 class="slide-left-anim" style="--anim-order: 2;">OHHH...</h1>
 				<p class="slide-left-anim" style="--anim-order: 3;">
-					Nous sommes désolés, ce cadeau est vide ! Il vous reste essais. Bonne chance !
+					Nous sommes désolés, ce cadeau est vide ! Il vous reste
+					<span id="attempts-count"></span> essais. Bonne chance !
 				</p>
 				<button type="button" class="button scale-anim" style="--anim-order: 4;">ok</button>
 
@@ -287,7 +286,7 @@
 						1. Vous devez remplir le formulaire et confirmer votre participation.
 					</li>
 					<li class="slide-left-anim" style="--anim-order: 5;">
-						2. Votre prix spécial de 1.95€ sera disponible pendant les prochaines 2 minutes 00 secondes.</li>
+						2. Votre prix spécial de 1.95€ sera disponible pendant les prochaines <span id="timer"></span>.</li>
 					<li class="slide-left-anim" style="--anim-order: 6;">
 						3. Le Coffret 6 Brut Impérial sera envoyé au gagnant dans un délai de 4 à 7 jours directement à
 						l'adresse indiquée.

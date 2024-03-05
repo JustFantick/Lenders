@@ -33,6 +33,9 @@ function initHomeLayout() {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
+		autoplay: {
+			delay: 15000,
+		}
 	});
 
 	const quizSlider = new Swiper('.quiz-slider', {
@@ -111,6 +114,7 @@ function initChoisePopup() {
 }
 
 function initPrizes() {
+	const popupOpenDelay = 4000;//4s
 	const prizesContainer = Prizes.querySelector('.prizes-grid');
 	prizesContainer.classList.add('fade-out-anim');
 	prizesContainer.classList.add('once');
@@ -123,28 +127,28 @@ function initPrizes() {
 		prizesContainer.appendChild(temp);
 	}
 
-	let showError = true;
+	let attemptCounter = 3;
 	const prizeBoxesArr = prizesContainer.querySelectorAll('.prize-item');
 	prizeBoxesArr.forEach(prize => {
 		prize.addEventListener('click', () => {
 			if (prize.classList.contains('open')) return;
 			prize.classList.add('open');
 
-			if (showError) {
+			if (attemptCounter > 1) {
+				attemptCounter--;
 				setTimeout(() => {
-					openErrorPopup();
-					showError = false;
-				}, 300);
+					openErrorPopup(attemptCounter)
+				}, popupOpenDelay * 0.75);
 			} else {
 				prize.classList.add('win');
-
-				setTimeout(openCongratsPopup, 600);
+				setTimeout(openCongratsPopup, popupOpenDelay);
 			}
 		});
 	});
 
-	function openErrorPopup() {
+	function openErrorPopup(n) {
 		contentWrapper.append(ErrorPopup.cloneNode(true));
+		contentWrapper.querySelector('#attempts-count').textContent = n
 		contentWrapper.querySelector('.error-popup .button').addEventListener(
 			'click',
 			closeActivePopup,
@@ -155,11 +159,25 @@ function initPrizes() {
 	function openCongratsPopup() {
 		contentWrapper.append(CongratsPopup.cloneNode(true));
 
+		startTimer(120);//120seconds = 2minutes
+
 		contentWrapper.querySelector('.congrats-popup .button').addEventListener(
 			'click',
-			closeActivePopup,
+			() => { },//placeholder function
 			{ once: true }
 		);
+
+		function startTimer(durationInSeconds) {
+			let timer = durationInSeconds;
+			const interval = setInterval(function () {
+				const minutes = Math.floor(timer / 60);
+				let seconds = timer % 60;
+				seconds = seconds < 10 ? "0" + seconds : seconds;
+				contentWrapper.querySelector('#timer').textContent = `${minutes} minutes ${seconds} seconds`;
+
+				if (--timer < 0) clearInterval(interval);
+			}, 1000);
+		}
 	}
 
 	async function closeActivePopup() {

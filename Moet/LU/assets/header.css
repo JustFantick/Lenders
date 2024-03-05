@@ -19,6 +19,15 @@
 	gap: 30px;
 }
 
+.logo,
+.categories,
+.promotion,
+.favorites,
+.cart,
+.searchbar img {
+	cursor: pointer;
+}
+
 .searchbar {
 	display: none;
 }

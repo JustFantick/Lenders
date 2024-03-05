@@ -30,7 +30,7 @@ html {
 
 	position: relative;
 
-	background: url('.assets/bg-full.png') repeat;
+	background: url('../assets/bg-full.png') repeat;
 }
 
 .wrapper__content {

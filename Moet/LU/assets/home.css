@@ -100,6 +100,9 @@
 	margin-top: 20px;
 	position: relative;
 	float: right;
+
+	align-self: flex-end;
+	margin-right: 15px;
 }
 
 .faq-icon::after {

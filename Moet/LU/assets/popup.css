@@ -19,9 +19,18 @@
 	text-align: center;
 	padding: 15px;
 	color: var(--text-color-secondary);
+	margin: 0 15px;
 
 	background-color: rgba(90, 90, 90, 0.2);
 	backdrop-filter: blur(var(--blur));
+}
+
+@media (min-width: 1024px) {
+	.popup__body {
+		min-width: clamp(700px, 75vw, 1200px);
+		min-height: clamp(525px, 55vh, 800px);
+		max-height: 80vh;
+	}
 }
 
 .popup__body .button {
@@ -39,10 +48,9 @@
 
 /* Error popup */
 .error-popup {
-	min-height: 40vh;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 	gap: 10px;
 }
@@ -59,6 +67,10 @@
 .congrats-popup h3,
 .congrats-popup button {
 	margin-top: clamp(5px, calc(1.6px + 0.96vw), 20px);
+}
+
+.congrats-popup li #timer {
+	color: var(--accent-color-primary);
 }
 
 /* FAQ popup */

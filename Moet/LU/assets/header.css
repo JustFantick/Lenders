@@ -78,4 +78,23 @@
 	.promotion {
 		display: none;
 	}
+
+	.header__left {
+		flex: 1 1 auto;
+	}
+
+	.header__body,
+	.header__left {
+		align-items: flex-end;
+	}
+
+	.logo {
+		order: 1;
+		flex: 1 1 auto;
+		text-align: center;
+	}
+
+	.categories {
+		order: 0;
+	}
 }

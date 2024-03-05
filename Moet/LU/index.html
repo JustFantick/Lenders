@@ -5,6 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+
 	<link rel="stylesheet" href="./assets/general.css">
 	<link rel="stylesheet" href="./assets/home.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -242,8 +246,14 @@
 
 	<template id="prize-item">
 		<div class="prize-item">
-			<img class="prize-item__head" src="assets/box-head.png" alt="box-head">
-			<img class="prize-item__bottom" src="assets/box-bottom.png" alt="box-bottom">
+			<div class="prize-item__head">
+				<img src="assets/box-head.png" alt="box-head">
+			</div>
+			<img class="prize-item__prize" src="assets/box-congrats-ver.png" alt="box-congrats">
+			<div class="prize-item__bottom">
+				<img class="prize-item__inside" src="assets/box-inside.png" alt="box-inside">
+				<img class="prize-item__bottom-box" src="assets/box-bottom.png" alt="box-bottom">
+			</div>
 		</div>
 	</template>
 

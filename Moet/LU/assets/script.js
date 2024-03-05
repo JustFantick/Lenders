@@ -111,34 +111,34 @@ function initChoisePopup() {
 }
 
 function initPrizes() {
-	contentWrapper.prepend(Prizes);
-	const prizesContainer = contentWrapper.querySelector('.prizes-grid');
+	const prizesContainer = Prizes.querySelector('.prizes-grid');
+	prizesContainer.classList.add('fade-out-anim');
+	prizesContainer.classList.add('once');
+	prizesContainer.style = `--anim-order: ${0};`;
+
+	contentWrapper.prepend(prizesContainer);
 
 	for (let i = 0; i < 12; i++) {
 		let temp = PrizesItem.querySelector('.prize-item').cloneNode(true);
-		temp.classList.add('slide-left-anim');
-		temp.classList.add('once');
-		temp.style = `--anim-order: ${i * 0.5};`;
 		prizesContainer.appendChild(temp);
 	}
 
 	let showError = true;
 	const prizeBoxesArr = prizesContainer.querySelectorAll('.prize-item');
-	const closePrizeBoxes = () => prizeBoxesArr.forEach(prize => prize.classList.remove('open'));
 	prizeBoxesArr.forEach(prize => {
 		prize.addEventListener('click', () => {
-			if (prize.classList.contains('open')) {
-				prize.classList.remove('open');
-				return;
-			}
-			closePrizeBoxes();
+			if (prize.classList.contains('open')) return;
 			prize.classList.add('open');
 
 			if (showError) {
-				openErrorPopup();
-				showError = false;
+				setTimeout(() => {
+					openErrorPopup();
+					showError = false;
+				}, 300);
 			} else {
-				openCongratsPopup();
+				prize.classList.add('win');
+
+				setTimeout(openCongratsPopup, 600);
 			}
 		});
 	});

@@ -71,8 +71,8 @@ const data = [
     {
         name: "Clive Ble****",
         address: "United Kongdom, London",
-        desc: "Just successfully bought a Xtreme Drill for £2.00",
-        img: "./assets/prize.png",
+        desc: "Just successfully bought DEWALT 20V MAX* XR Chainsaw Kitl for £2.00",
+        img: "./assets/chainsaw.png",
         time: "25 sec ago",
     },
 ];

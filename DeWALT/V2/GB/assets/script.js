@@ -12,12 +12,13 @@ const giftImgWin = document.querySelector(".img_gift");
 
 function displayGift(event) {
     let answer = event.target.dataset.answer;
-    // const images = {
-    //     1: "1.png",
-    //     2: "2.png",
-    //     3: "3.png",
-    // };
-    let imgPath = `./assets/prize.png`;
+    const images = {
+        1: "drill.png",
+        2: "chainsaw.png",
+        3: "dual-port-charger.png",
+        4: "push-lawn-mower.png",
+    };
+    let imgPath = `./assets/${images[answer]}`;
     let imgItems = Object.values(giftImg);
 
     imgItems.map((item) => {

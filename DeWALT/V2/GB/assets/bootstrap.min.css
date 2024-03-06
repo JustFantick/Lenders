@@ -6336,7 +6336,6 @@ a.close.disabled {
     backdrop-filter: blur(10px);
     background-color: rgba(26, 26, 26, 0.4);
     background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 0.3rem;
     outline: 0;
 }
@@ -6420,8 +6419,8 @@ a.close.disabled {
 
 @media (min-width: 576px) {
     .modal-dialog {
-        max-width: 500px;
-        margin: 1.75rem auto;
+        /* max-width: 500px;
+        margin: 1.75rem auto; */
     }
 
     .modal-dialog-scrollable {

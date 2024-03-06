@@ -1560,6 +1560,10 @@ p.question {
     align-items: center;
 }
 
+.modal.fade.show {
+    z-index: 1050;
+}
+
 /* .modal.fade .modal-dialog,
 .modal.show .modal-dialog {} */
 

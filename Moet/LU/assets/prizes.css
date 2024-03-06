@@ -23,8 +23,9 @@
 	width: clamp(98px, calc(59.2px + 9.93vw), 250px);
 	aspect-ratio: 250 / 267;
 	position: relative;
+	cursor: pointer;
 
-	--box-anim-duration: 3s;
+	--box-anim-duration: 1s;
 }
 
 @keyframes temblor {

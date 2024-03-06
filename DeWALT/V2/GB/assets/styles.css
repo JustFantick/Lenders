@@ -1500,7 +1500,9 @@ p.question {
 }
 
 .slider img {
-    width: 100%;
+    height: clamp(206px, calc(97.12px + 27.9vw), 499px);
+    object-fit: contain;
+    aspect-ratio: auto;
 }
 
 .modal.fade .modal-dialog {

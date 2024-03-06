@@ -2612,6 +2612,10 @@ p.question {
     max-width: 598px;
 }
 
+.conter p:not(:last-child) {
+    margin-bottom: 1em !important;
+}
+
 .header__body {
     width: 100%;
     border-bottom: none;
@@ -2686,6 +2690,16 @@ p.question {
     justify-content: space-around !important;
 }
 
+.sss strong {
+    font-size: clamp(1rem, calc(0.54rem + 1.9vw), 2.25rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.375;
+}
+
+.main-content__title {
+    font-size: clamp(2.25rem, calc(1.79rem + 1.9vw), 3.5rem);
+}
+
 @media (max-width: 900px) {
     .header-underline__section:not(:first-child) {
         display: none;
@@ -2698,7 +2712,6 @@ p.question {
 
     .main-content__title {
         font-family: Nunito Sans;
-        font-size: 36px;
         font-weight: 700;
         line-height: 49px;
         letter-spacing: 0em;

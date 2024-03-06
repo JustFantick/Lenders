@@ -594,6 +594,20 @@ body {
     }
 }
 
+.loader-frame>* {
+    text-align: center !important;
+}
+
+.loader-frame>*:not(:last-child) {
+    margin-bottom: 25px !important;
+}
+
+.loader-frame>*:last-child {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 27px !important;
+}
+
 .circle-loader {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-left-color: #fff;

@@ -25,7 +25,7 @@
 	position: relative;
 	cursor: pointer;
 
-	--box-anim-duration: 3s;
+	--box-anim-duration: 1s;
 }
 
 @keyframes temblor {

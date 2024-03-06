@@ -910,6 +910,14 @@ body {
     gap: 15px;
 }
 
+.modal-body.ohh-popup-body {
+    justify-content: space-around;
+}
+
+.modal-body.ohh-popup-body h2 {
+    font-size: clamp(1.63rem, calc(0.93rem + 2.86vw), 3.5rem);
+}
+
 @media (min-width: 900px) {
     .modal-dialog {
         width: clamp(700px, 75vw, 1200px) !important;

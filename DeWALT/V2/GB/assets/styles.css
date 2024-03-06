@@ -1287,7 +1287,7 @@ p.question {
     /* border: 2px solid #f0f0f0; */
     color: #fff;
     padding: 5px 0;
-    margin: 5px 0;
+    /* margin: 5px 0; */
     /* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.74); */
 }
 
@@ -2749,6 +2749,12 @@ p.question {
     font-size: clamp(2.25rem, calc(1.79rem + 1.9vw), 3.5rem);
 }
 
+.fff {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
 @media (max-width: 900px) {
     .header-underline__section:not(:first-child) {
         display: none;
@@ -2815,6 +2821,7 @@ p.question {
     }
 
     .fff {
+        display: flex;
         flex-direction: column;
         gap: 10px !important;
     }
